@@ -18,8 +18,10 @@ ul{
     padding: 5px 10px; 
     border-radius: 10px; 
     font-weight: bolder;
-    box-shadow: 1px 1px blue;
+    
 }
 .mainButton:hover {
     cursor: pointer;
+    box-shadow: 1px 1px blue;
+    transform: scale(1.1);
 }
