@@ -70,19 +70,37 @@ ul{
 
 .breedCardContainer{
     display: flex;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     
 }
 
 .breedCard{
     margin: 10px;
+    background-color:rgb(69, 65, 65);
+    box-shadow:5px 10px 5px rgb(142, 141, 141);
+    border-radius: 10px;
 
+}
+.breedTitle{
+    color: white;
+    margin: 10px;
+    font-weight: bold;
+    font-size: x-large;
 }
 .contenedorImagen {
     width: 200px;
     height: 300px;
     display: flex;
+    margin-bottom: 10px;
+}
+.contenedorImagen:hover{
+    cursor: pointer;
+    transform:scale(1.02);
 }
 .contenedorImagen> img {
     object-fit: cover;
     width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
