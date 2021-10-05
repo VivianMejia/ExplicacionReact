@@ -1,44 +1,27 @@
-import CardRazasPerros from 'components/CardRazasPerros';
+import Index from 'pages';
+import LabradorInfoPage from 'pages/labrador';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"; 20.3K (gzipped: 7.5K)
 import 'styles/styles.css';
-import logo from 'media/Huella.jpg';
-import pimpim from 'media/pimpim.jpeg';
-import labrador from 'media/labrador.jpg';
+
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <ul className="navbar">
-            <li>
-                <img src={logo} alt="imagen" class="logo" />
-            </li>
-        
-            <li><button className="button mainButton"> + Nuevo post</button> </li>
-            <li>
-                <div className="buscar">
-                    <input placeholder="buscar una raza"/>
-                    <i className="fas fa-search button iconoBusqueda"></i> 
-                </div>
-                
-            </li>
-            <li><button className="button secondaryButton">Iniciar Sesion</button></li>
-            <li><button className ="button mainButton">Registrarme</button></li>
-        </ul>
-    </header>
-        <main>
-            <section> 
-                <h1>Razas de Perros</h1>
-                <ul className="breedCardContainer">
-                    <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
-                    <CardRazasPerros nombreRaza="labrador" imagen={labrador}/>
-                    <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
-                    <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
-                    <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
-                </ul>
-            </section>
-            <section></section>
-        </main>
-        <footer></footer>
+      <Router>
+        <Switch>
+          <Route path='/labrador'>
+            <LabradorInfoPage />
+          </Route>
+          <Route path='/'>
+            <Index/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

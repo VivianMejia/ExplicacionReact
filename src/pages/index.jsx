@@ -1,6 +1,45 @@
 import CardRazasPerros from 'components/CardRazasPerros'
+import logo from 'media/Huella.jpg';
+import pimpim from 'media/pimpim.jpeg';
+import labrador from 'media/labrador.jpg';
+
 function Index(){
-    return <div> Hola, soy el index </div>;
+    return (
+    <div className="App">
+    <header>
+      <ul className="navbar">
+          <li>
+              <img src={logo} alt="imagen" class="logo" />
+          </li>
+      
+          <li><button className="button mainButton"> + Nuevo post</button> </li>
+          <li>
+              <div className="buscar">
+                  <input placeholder="buscar una raza"/>
+                  <i className="fas fa-search button iconoBusqueda"></i> 
+              </div>
+              
+          </li>
+          <li><button className="button secondaryButton">Iniciar Sesion</button></li>
+          <li><button className ="button mainButton">Registrarme</button></li>
+      </ul>
+  </header>
+      <main>
+          <section> 
+              <h1>Razas de Perros</h1>
+              <ul className="breedCardContainer">
+                  <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
+                  <CardRazasPerros nombreRaza="labrador" imagen={labrador}/>
+                  <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
+                  <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
+                  <CardRazasPerros nombreRaza="linda" imagen={pimpim}/>
+              </ul>
+          </section>
+          <section></section>
+      </main>
+      <footer></footer>
+  </div>
+    )
 }
 
 export default Index;
