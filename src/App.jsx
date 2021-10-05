@@ -1,7 +1,8 @@
-import './styles/styles.css';
-import logo from './media/Huella.jpg';
-import pimpim from './media/pimpim.jpeg';
-import labrador from './media/labrador.jpg';
+import CardRazasPerros from 'components/CardRazasPerros';
+import 'styles/styles.css';
+import logo from 'media/Huella.jpg';
+import pimpim from 'media/pimpim.jpeg';
+import labrador from 'media/labrador.jpg';
 
 function App() {
   return (
@@ -42,15 +43,6 @@ function App() {
   );
 }
 
-function CardRazasPerros({ nombreRaza, imagen }){
-    return(
-        <li className="breedCard">
-            <div className="contenedorImagen">
-                <img src={imagen} alt={nombreRaza} />   
-            </div>
-            <span className="breedTitle">{nombreRaza}</span>       
-        </li>
-    );
-}
+
 
 export default App;
